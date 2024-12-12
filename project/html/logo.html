@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Responsive Menu Example</title>
+    <script src="https://kit.fontawesome.com/ef86e635a3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="top">
+        <ul id="menu" class="item1">   
+            <li class="logo"><a href="../html/logo.html"><img class="logoo" src="C:\Users\User\Desktop\project\pic\KakaoTalk_20240910_211412105.png" alt="Logo"></a></li>
+            <li id="menu"><a href="../html/booze.html">Booze</a></li>
+            <li id="menu">Create</li>
+            <li id="menu" class="search">search</li> <!-- search 클래스 추가 -->
+            <li id="menu" class="rightmenu"><a href="../html/login.html" target="_blank">login</a></li>
+        </ul>
+    </div>
+
+    <div class="slide-viewer">
+        <div class="slide-group">
+            <div class="slide slide-1"><img class="banner" src="../pic/bannerpic1.png" alt="Banner 1"></div>
+            <div class="slide slide-3"><img class="banner" src="../pic/bannerpic2.png" alt="Banner 2"></div>
+            <div class="slide slide-4"><img class="banner" src="../pic/bannerpic3.webp" alt="Banner 3"></div>
+            <div class="slide slide-2"><img class="banner" src="../pic/bannerpic2.webp" alt="Banner 4"></div>
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+
+    <script src="../js/color.js"></script>
+    <script src="../js/banner.js"></script>
+</body>
+</html>

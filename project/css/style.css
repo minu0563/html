@@ -1,0 +1,156 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid white;
+}
+
+.item1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 80px; /* 로고를 약간 왼쪽으로 이동 */
+}
+
+.logoo {
+    width: 120px;
+    height: auto;
+}
+
+.item1 li:not(.logo) {
+    margin-left: 50px; /* 메뉴 항목들 사이의 간격 */
+}
+
+.rightmenu {
+    margin-right: 70px;
+}
+
+.slide-viewer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+}
+
+.slide-group {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 600px;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .item1 li:not(.logo) {
+        margin-left: 30px; /* 메뉴 간격 축소 */
+    }
+    .banner {
+        height: 500px; /* 배너 크기 축소 */
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .logoo {
+        width: 100px; /* 로고 크기 축소 */
+    }
+
+    .item1 li:not(.logo) {
+        margin-left: 20px; /* 메뉴 간격 축소 */
+    }
+
+    .slide {
+        height: 400px; /* 배너 높이 조정 */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Booze와 search만 남기고 나머지 항목 숨기기 */
+    .item1 li:not(.logo):nth-child(n+3):not(.search) {
+        display: none;
+    }
+
+    /* .logo의 margin-left 값 수정 */
+    .logo {
+        margin-left: 40px; /* 로고 왼쪽 여백 수정 */
+    }
+
+    /* Booze와 search 간격을 기존처럼 유지 */
+    .item1 li:not(.logo) {
+        margin-left: 50px; /* 메뉴 항목 간격 유지 */
+        font-size: initial; /* 글자 크기 변경하지 않음 */
+    }
+
+    /* .prev, .next 버튼 크기 수정 */
+    .prev, .next {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    /* 슬라이드 높이 수정 */
+    .slide {
+        height: 400px;
+    }
+}
